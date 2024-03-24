@@ -1,6 +1,5 @@
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
-import styled from "styled-components";
-import colors from "../../utils/style/colors";
 import "../../utils/style/sass/header.scss";
 
 function Header() {
@@ -12,14 +11,14 @@ function Header() {
         </div>
         <ul className="StyledUl">
           <li className="StyledLi">
-            <a href="#" className="StyledA">
+            <Link to="/" className="StyledA">
               Accueil
-            </a>
+            </Link>
           </li>
           <li className="StyledLi">
-            <a href="#" className="StyledA">
+            <Link to="/about???" className="StyledA">
               A Propos
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
