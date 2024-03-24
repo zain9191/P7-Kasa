@@ -1,17 +1,17 @@
 import { createGlobalStyle } from "styled-components";
 const StyledGlobalStyle = createGlobalStyle`
-    body{
-      display: flex;
-      justify-content: center; 
-      align-items: center; 
-      border:dotted 2px red;
-      width: 100vh;
-    }
-    * {
-      font-family: 'Trebuchet MS', Helvetica, sans-serif;
-    }
-`;
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('path/to/Montserrat-Regular.woff2') format('woff2'),
+         url('path/to/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
 
+  * {
+    font-family: 'Montserrat'
+  }
+`;
 function GlobalStyle() {
   return <StyledGlobalStyle />;
 }
