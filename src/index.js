@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { createRoot } from 'react-dom/client';
 import Header from './components/Header';
-import Card from './components/Card';
+// import Card from './components/Card';
 import GlobalStyle from './utils/style/GlobalStyle';
 import Home from './Home'
 
@@ -17,7 +17,7 @@ root.render(
         <Routes>
         <Route path="/" element={<Home />} />
         </Routes>
-      <Card/>
+      {/* <Card/> */}
     </React.StrictMode>
   </Router>
 );

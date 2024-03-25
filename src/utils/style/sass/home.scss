@@ -1,14 +1,15 @@
 .Home-Div-Cont{
     height: 255px;
     border-radius: 10px;
-    background: rgb(121,21,21);
     background: linear-gradient(0deg, rgba(121,21,21,0.7329525560224089) 0%, rgba(255,97,97,1) 100%);
-
-
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
     margin: 20px 0px;
+
+
+  background-size: cover;
+  background-position: center;
 }
 .Home-h2{
     font-weight: 500;
@@ -16,4 +17,8 @@
     line-height: 25.67px;
     color: #FFFFFF;
     padding-left: 21px;
+}
+.Home-Logement-img{
+    height: 100%;
+    width: 100%;
 }
