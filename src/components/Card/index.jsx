@@ -10,9 +10,6 @@ const Card = () => {
         const response = await fetch("/logements.json");
         if (!response.ok) throw new Error("Data could not be fetched");
         const data = await response.json();
-        // Assuming we want the data for "Studio d'artiste", which has id "f72a452f"
-        // const studioData = data.find((item) => item.id === "b9123946");
-        // setAccommodation(studioData);
       } catch (error) {
         console.error("Error fetching data: ", error);
       }
