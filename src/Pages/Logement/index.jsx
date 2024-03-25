@@ -18,7 +18,6 @@ function Logement() {
                 <div key={logement.id}>
                   <h2>{logement.title}</h2>
                   <p>{logement.description}</p>
-                  {/* Render other details as needed */}
                 </div>
               );
             }

@@ -26,7 +26,8 @@ function Home() {
       </div>
       {logementsData &&
         logementsData.map((logementData) => (
-          <div
+          <a
+            href={"logement/" + logementData.id}
             key={logementData.id}
             className="Home-Div-Cont"
             style={{
@@ -34,7 +35,7 @@ function Home() {
             }}
           >
             <h2 className="Home-h2">{logementData.title} </h2>
-          </div>
+          </a>
         ))}
     </div>
 
