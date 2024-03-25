@@ -31,17 +31,18 @@ function Home() {
 
   return (
     <div>
-      {logementsData.map((logementData) => (
-        <div
-          key={logementData.id}
-          className="Home-Div-Cont"
-          style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${logementData.cover})`,
-          }}
-        >
-          <h2 className="Home-h2">{logementData.title} </h2>
-        </div>
-      ))}
+      {logementsData &&
+        logementsData.map((logementData) => (
+          <div
+            key={logementData.id}
+            className="Home-Div-Cont"
+            style={{
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${logementData.cover})`,
+            }}
+          >
+            <h2 className="Home-h2">{logementData.title} </h2>
+          </div>
+        ))}
     </div>
 
     // testLogement
