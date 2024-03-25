@@ -5,6 +5,7 @@ import Header from './components/Header';
 import GlobalStyle from './utils/style/GlobalStyle';
 import Home from './Home'
 import Error from './components/Error';
+import Footer from './components/Footer';
 
 
 const root = createRoot(document.getElementById('root'));
@@ -18,6 +19,7 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="*" element={<Error />} />
         </Routes>
+        <Footer/>
     </React.StrictMode>
   </Router>
 );

@@ -9,7 +9,7 @@ function Error() {
         Oups! La page que vous demandez n'existe pas.
       </span>
 
-      <a>Retourner sur la page d’accueil</a>
+      <a className="error-back-home">Retourner sur la page d’accueil</a>
     </div>
   );
 }

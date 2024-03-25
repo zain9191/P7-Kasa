@@ -1,0 +1,20 @@
+.Footer-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 201px;
+
+    background-color: black;
+    margin-top: 100px;
+}
+
+.Footer-logo{
+    width: 125px;
+    height: 40px;
+}
+
+.footer-span{
+    color: #fff;
+}

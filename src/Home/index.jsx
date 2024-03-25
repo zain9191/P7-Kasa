@@ -18,19 +18,12 @@ function Home() {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
-  const testLogement = (
-    <div
-      className="Home-Div-Cont"
-      // style={{
-      //   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backgroundImageUrl})`,
-      // }}
-    >
-      <h2 className="Home-h2">Titre de la location</h2>
-    </div>
-  );
-
   return (
     <div>
+      <div className="StyledBackgroundDiv">
+        <div className="StyledOverlay" />
+        <span className="StyledText">Chez vous, partout et ailleurs</span>
+      </div>
       {logementsData &&
         logementsData.map((logementData) => (
           <div

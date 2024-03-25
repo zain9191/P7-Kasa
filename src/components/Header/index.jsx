@@ -22,10 +22,6 @@ function Header() {
           </li>
         </ul>
       </div>
-      <div className="StyledBackgroundDiv">
-        <div className="StyledOverlay" />
-        <span className="StyledText">Chez vous, partout et ailleurs</span>
-      </div>
     </div>
   );
 }
