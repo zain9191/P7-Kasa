@@ -11,12 +11,12 @@ function Header() {
         </div>
         <ul className="StyledUl">
           <li className="StyledLi">
-            <Link to="/" className="StyledA">
+            <Link to="/" className="StyledLink">
               Accueil
             </Link>
           </li>
           <li className="StyledLi">
-            <Link to="/about???" className="StyledA">
+            <Link to="/about" className="StyledLink">
               A Propos
             </Link>
           </li>
