@@ -1,5 +1,5 @@
 import errorImg from "../../assets/error.png";
-import "../../utils/style/sass/error.scss";
+import "../../style/css/main.css";
 function Error() {
   return (
     <div className="error-main-div">

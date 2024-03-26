@@ -1,6 +1,6 @@
 import React from "react";
 import { useCollapse } from "react-collapsed";
-import "../../utils/style/sass/test.scss";
+import "../../style/css/main.css";
 import arrowDown from "../../assets/arrow-down.png";
 import arrowUp from "../../assets/arrow-up.png";
 

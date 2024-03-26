@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../utils/hooks";
-import "../../utils/style/sass/logement.scss";
+import "../../style/css/main.css";
 import Rating from "../../components/Rating";
 import { DescriptionColla } from "../../components/Collapse/index";
 

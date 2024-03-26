@@ -1,5 +1,5 @@
 import Card from "../../components/Card";
-import "../../utils/style/sass/home.scss";
+import "../../style/css/main.css";
 import { useEffect, useState } from "react";
 
 function Home() {

@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { createRoot } from 'react-dom/client';
 import Header from './components/Header';
-import GlobalStyle from './utils/style/GlobalStyle';
+import GlobalStyle from './style/GlobalStyle';
 import Home from './Pages/Home/index'
 import Error from './components/Error';
 import Footer from './components/Footer';
