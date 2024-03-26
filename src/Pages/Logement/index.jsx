@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useFetch } from "../../utils/hooks";
 import "../../utils/style/sass/logement.scss";
 import Rating from "../../components/Rating";
+import { DescriptionColla } from "../../components/Collapse/index";
 
 function Logement() {
   const { logementId } = useParams();
@@ -33,12 +34,24 @@ function Logement() {
                     ))}
                   </div>
 
-                  <div className="logement-owner-rating">
-                    <div className="logement-rating-div">
-                      <Rating rating={parseInt(logement.rating)} />
-                    </div>
+                  <div className="logement-rating-owner">
+                    <Rating
+                      rating={parseInt(logement.rating)}
+                      className="logement-rating-div"
+                    />
 
-                    <div className="logement-owner"></div>
+                    <div className="logement-owner">
+                      {logement.host["name"]}
+                      <img
+                        className="owner-pic"
+                        src={logement.host["picture"]}
+                        alt="the owner"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="logement-description">
+                    <DescriptionColla description={logement.description} />
                   </div>
                 </div>
               );

@@ -52,7 +52,35 @@
     margin: 10px;
 }
 
+.logement-rating-owner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
 
 
+.rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.star{
 
+    width: 18px;
+    height: 18px;
+}
 
+.owner-pic{
+    // width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.logement-description{
+    // background-color: #ff6161;
+    // width: 100%;
+    // // height: 30px;
+    // border-radius: 5px;
+}

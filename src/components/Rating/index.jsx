@@ -10,12 +10,11 @@ const Rating = ({ rating }) => {
   for (let i = 1; i <= maxRating; i++) {
     stars.push(i <= rating ? filledStar : emptyStar);
   }
-  console.log(emptyStar, filledStar);
 
   return (
     <div className="rating">
       {stars.map((star, index) => (
-        <img key={index} src={star} alt="star" />
+        <img key={index} src={star} alt="star" className="star" />
       ))}
     </div>
   );
