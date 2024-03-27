@@ -1,24 +1,26 @@
 @import "variables";
 
-
-.error-main-div {
+.error-main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   color: $color-Primaire; 
-}
-.error-img{
+
+  &__img {
     width: 80%;
     height: auto;
     padding-top: 150px;
-}
-.error-msg{
+  }
+
+  &__msg {
     margin: 20px 50px 50px 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.error-back-home{
-  margin-top: 100px;
+  }
+
+  &__back {
+    margin-top: 100px;
+  }
 }

@@ -16,11 +16,12 @@ root.render(
     <React.StrictMode>
       <GlobalStyle />
       <Header/>
-        <Routes>
+      <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="*" element={<Error />} />
         <Route path="/logement/:logementId" element={<Logement />} />
-        </Routes>
+        <Route path="*" element={<Error />} />
+    </Routes>
+
         <Footer/>
     </React.StrictMode>
   </Router>

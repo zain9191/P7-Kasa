@@ -7,16 +7,16 @@ function Header() {
     <div>
       <div className="StyledHeaderDiv">
         <div>
-          <img className="StyledLogo" src={logo} alt="logo" />
+          <img className="StyledHeaderDiv__Logo" src={logo} alt="logo" />
         </div>
-        <ul className="StyledUl">
-          <li className="StyledLi">
-            <Link to="/" className="StyledLink">
+        <ul className="StyledHeaderDiv__Ul">
+          <li className="StyledHeaderDiv__Li">
+            <Link to="/" className="StyledHeaderDiv__Link">
               Accueil
             </Link>
           </li>
-          <li className="StyledLi">
-            <Link to="/about" className="StyledLink">
+          <li className="StyledHeaderDiv__Li">
+            <Link to="/about" className="StyledHeaderDiv__Link">
               A Propos
             </Link>
           </li>

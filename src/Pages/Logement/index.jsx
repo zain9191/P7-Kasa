@@ -3,7 +3,10 @@ import { useParams } from "react-router-dom";
 import { useFetch } from "../../utils/hooks";
 import "../../style/css/main.css";
 import Rating from "../../components/Rating";
-import { DescriptionColla } from "../../components/Collapse/index";
+import {
+  DescriptionCollapse,
+  EquipmentCollapse,
+} from "../../components/Collapse/index";
 
 function Logement() {
   const { logementId } = useParams();
@@ -18,40 +21,42 @@ function Logement() {
           {data.map((logement) => {
             if (logement.id === logementId) {
               return (
-                <div className="logement-main-div" key={logement.id}>
+                <div className="logement__main" key={logement.id}>
                   <img
-                    className="logement-img"
+                    className="logement__img"
                     src={logement.cover}
                     alt="logement cover "
                   />
-                  <h2 className="logement-title">{logement.title}</h2>
-                  <h3 className="logement-location">{logement.location}</h3>
-                  <div className="logement-tags-div">
+                  <h2 className="logement__title">{logement.title}</h2>
+                  <h3 className="logement__location">{logement.location}</h3>
+                  <div className="logement__tags--div">
                     {logement.tags.map((tag, index) => (
                       <div key={index}>
-                        <span className="logement-tags-span">{tag}</span>
+                        <span className="logement__tags--span">{tag}</span>
                       </div>
                     ))}
                   </div>
 
-                  <div className="logement-rating-owner">
+                  <div className="logement__rating-owner">
                     <Rating
                       rating={parseInt(logement.rating)}
-                      className="logement-rating-div"
+                      className="logement__rating-div"
                     />
 
-                    <div className="logement-owner">
+                    <div className="logement__owner">
                       {logement.host["name"]}
                       <img
-                        className="owner-pic"
+                        className="logement__owner-pic"
                         src={logement.host["picture"]}
                         alt="the owner"
                       />
                     </div>
                   </div>
 
-                  <div className="logement-description">
-                    <DescriptionColla description={logement.description} />
+                  <div className="logement__description">
+                    <DescriptionCollapse description={logement.description} />
+                    <br></br>
+                    <EquipmentCollapse equipment={logement.equipments} />
                   </div>
                 </div>
               );

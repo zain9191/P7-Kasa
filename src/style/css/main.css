@@ -3,28 +3,63 @@
   flex-direction: row;
   justify-content: space-between;
 }
-
-.StyledLogo {
+.StyledHeaderDiv__Logo {
   height: 68px;
 }
-
-.StyledUl {
+.StyledHeaderDiv__Ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   list-style: none;
   width: 335px;
 }
-
-.StyledLi {
+.StyledHeaderDiv__Li {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.StyledLink {
+.StyledHeaderDiv__Link {
   color: #ff6161;
   text-decoration: none;
+}
+
+.Footer-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 201px;
+  background-color: black;
+  margin-top: 150px;
+}
+.Footer-div__logo {
+  width: 125px;
+  height: 40px;
+}
+.Footer-div__span {
+  color: #fff;
+}
+
+.error-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: #ff6161;
+}
+.error-main__img {
+  width: 80%;
+  height: auto;
+  padding-top: 150px;
+}
+.error-main__msg {
+  margin: 20px 50px 50px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.error-main__back {
+  margin-top: 100px;
 }
 
 .StyledBackgroundDiv {
@@ -36,58 +71,13 @@
   border-radius: 10px;
   height: 111px;
 }
-
-.StyledText {
+.StyledBackgroundDiv__Text {
   color: #ffffff;
   font-weight: 300;
   font-size: 24px;
   line-height: 24px;
   width: 217px;
   padding-left: 30px;
-}
-
-.Footer-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 201px;
-  background-color: black;
-  margin-top: 100px;
-}
-
-.Footer-logo {
-  width: 125px;
-  height: 40px;
-}
-
-.footer-span {
-  color: #fff;
-}
-
-.error-main-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  color: #ff6161;
-}
-
-.error-img {
-  width: 80%;
-  height: auto;
-  padding-top: 150px;
-}
-
-.error-msg {
-  margin: 20px 50px 50px 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.error-back-home {
-  margin-top: 100px;
 }
 
 .Home-Div-Cont {
@@ -100,9 +90,9 @@
   margin: 20px 0px;
   background-size: cover;
   background-position: center;
+  text-decoration: none;
 }
-
-.Home-h2 {
+.Home-Div-Cont__h2 {
   font-weight: 500;
   font-size: 18px;
   line-height: 25.67px;
@@ -110,41 +100,32 @@
   padding-left: 21px;
 }
 
-.Home-Logement-img {
-  height: 100%;
-  width: 100%;
-}
-
-* {
-  color: #ff6161;
-}
-
-.logement-main-div {
+.logement__main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
   width: 100%;
+  height: fit-content;
 }
-
-.logement-img {
+.logement__img {
   height: 255px;
   width: 100%;
+  border-radius: 10px;
 }
-
-.logement-title {
+.logement__title {
   font-size: 18px;
   font-weight: 500;
   line-height: 25.67px;
+  color: #ff6161;
 }
-
-.logement-location {
+.logement__location {
   font-size: 14px;
   font-weight: 500;
   line-height: 19.96px;
+  color: #ff6161;
 }
-
-.logement-tags-div {
+.logement__tags--div {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -153,8 +134,7 @@
   flex-wrap: wrap;
   min-height: 60px;
 }
-
-.logement-tags-span {
+.logement__tags--span {
   font-size: 10px;
   font-weight: 500;
   line-height: 14.26px;
@@ -165,41 +145,49 @@
   padding: 5px 15px;
   margin: 10px;
 }
-
-.logement-rating-owner {
+.logement__rating-owner {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  color: #ff6161;
 }
-
-.rating {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+.logement__description {
+  width: 100%;
+  height: fit-content;
+  border-radius: 5px;
 }
-
-.star {
-  width: 18px;
-  height: 18px;
-}
-
-.owner-pic {
+.logement__owner-pic {
   height: 32px;
   border-radius: 50%;
 }
 
-.collapsible {
-  border: blue dotted 3px;
-}
-
-.Des-collapsible {
+.collapsible__header {
+  background-color: #ff6161;
   color: #ffffff;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 5px 0px 0px 15px;
+  position: relative;
+  border-radius: 10px;
+  z-index: 1;
+}
+.collapsible__content {
+  color: #ff6161;
+  background-color: #F6F6F6;
+  padding: 20px 10px 10px 10px;
+  border-radius: 10px;
+  position: relative;
+  margin-top: -10px;
+}
+.collapsible__content--list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  padding-left: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */

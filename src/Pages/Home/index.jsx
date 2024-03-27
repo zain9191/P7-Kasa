@@ -22,7 +22,9 @@ function Home() {
     <div>
       <div className="StyledBackgroundDiv">
         <div className="StyledOverlay" />
-        <span className="StyledText">Chez vous, partout et ailleurs</span>
+        <span className="StyledBackgroundDiv__Text">
+          Chez vous, partout et ailleurs
+        </span>
       </div>
       {logementsData &&
         logementsData.map((logementData) => (
@@ -34,7 +36,7 @@ function Home() {
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${logementData.cover})`,
             }}
           >
-            <h2 className="Home-h2">{logementData.title} </h2>
+            <h2 className="Home-Div-Cont__h2">{logementData.title} </h2>
           </a>
         ))}
     </div>
