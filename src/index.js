@@ -7,6 +7,7 @@ import Home from './Pages/Home/index'
 import Error from './components/Error';
 import Footer from './components/Footer';
 import Logement from './Pages/Logement';
+import About from './Pages/About';
 
 
 const root = createRoot(document.getElementById('root'));
@@ -17,9 +18,11 @@ root.render(
       <GlobalStyle />
       <Header/>
       <Routes>
+        <Route path="/about" element={<About />} />
         <Route path="/" element={<Home />} />
         <Route path="/logement/:logementId" element={<Logement />} />
-        <Route path="*" element={<Error />} />
+        <Route path="*" element={<Error />} /> 
+
     </Routes>
 
         <Footer/>

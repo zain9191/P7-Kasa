@@ -1,23 +1,26 @@
 @import "_variables";
 
 .collapsible {
-//  border: blue dotted 3px;
 
   &__header {
     background-color: $color-Primaire;
     color: #ffffff;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
     padding: 5px 0px 0px 15px;
     position: relative;
     border-radius: 10px;
     z-index: 1;
+    height: 30px;
 
     img {
-        // width: 100%;
-        // height: 100%;
+        height: 18.5px;
+        width: 30px;
+        padding-right: 5px;
     }
   }
 
@@ -33,18 +36,31 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+
       list-style: none;
-      padding-left: 10px;
+
+      padding-left:  0px;
+      margin: 0px;
+
+
+
 
       li {
+
         // width: 100%;
         // height: 100%;
+        
     }
     }
 
     &--text {
+      padding-left: 15px;
+
+      
+
         // width: 100%;
         // height: 100%;
+
     }
   }
 }

@@ -58,6 +58,30 @@ export function EquipmentCollapse({ equipment }) {
   );
 }
 
+export function AboutColla({ title, description }) {
+  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
+
+  return (
+    <div className="collapsible">
+      <div className="Des-collapsible" {...getToggleProps()}>
+        <span>{title}</span>
+        {isExpanded ? (
+          <img src={arrowDown} alt="hide description" />
+        ) : (
+          <img src={arrowUp} alt="show description" />
+        )}
+      </div>
+      <div {...getCollapseProps()}>
+        <div className="content">
+          {description} <br />
+          <br />
+          Click again to hide...
+        </div>
+      </div>
+    </div>
+  );
+}
+
 DescriptionCollapse.propTypes = {
   description: PropTypes.string.isRequired,
 };

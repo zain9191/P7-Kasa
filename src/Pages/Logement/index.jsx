@@ -7,6 +7,7 @@ import {
   DescriptionCollapse,
   EquipmentCollapse,
 } from "../../components/Collapse/index";
+import Carousel from "../../components/Carousel";
 
 function Logement() {
   const { logementId } = useParams();
@@ -22,11 +23,8 @@ function Logement() {
             if (logement.id === logementId) {
               return (
                 <div className="logement__main" key={logement.id}>
-                  <img
-                    className="logement__img"
-                    src={logement.cover}
-                    alt="logement cover "
-                  />
+                  <Carousel images={logement["pictures"]} />
+
                   <h2 className="logement__title">{logement.title}</h2>
                   <h3 className="logement__location">{logement.location}</h3>
                   <div className="logement__tags--div">
@@ -36,7 +34,6 @@ function Logement() {
                       </div>
                     ))}
                   </div>
-
                   <div className="logement__rating-owner">
                     <Rating
                       rating={parseInt(logement.rating)}
@@ -52,7 +49,6 @@ function Logement() {
                       />
                     </div>
                   </div>
-
                   <div className="logement__description">
                     <DescriptionCollapse description={logement.description} />
                     <br></br>
