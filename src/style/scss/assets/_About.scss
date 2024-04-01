@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
     > img{
         max-height: 336px;
         object-fit: cover;
@@ -9,7 +10,11 @@
         border-radius: 15px;
 
     }
-    > div{
-        padding-bottom: 20px;
+    &__AboutColla{
+        border:  dotted black 3px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
+   
 }

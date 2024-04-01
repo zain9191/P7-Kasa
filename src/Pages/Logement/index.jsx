@@ -51,7 +51,6 @@ function Logement() {
                   </div>
                   <div className="logement__description">
                     <DescriptionCollapse description={logement.description} />
-                    <br></br>
                     <EquipmentCollapse equipment={logement.equipments} />
                   </div>
                 </div>

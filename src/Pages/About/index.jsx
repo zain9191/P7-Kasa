@@ -17,9 +17,11 @@ function About() {
   return (
     <div className="AboutDiv">
       <img src={bg} className="AboutDiv__img" alt="Cover" />
-      {Object.entries(AboutVar).map(([title, description], index) => (
-        <AboutColla key={index} title={title} description={description} />
-      ))}
+      <div className="AboutDivAboutColla">
+        {Object.entries(AboutVar).map(([title, description], index) => (
+          <AboutColla key={index} title={title} description={description} />
+        ))}
+      </div>
     </div>
   );
 }

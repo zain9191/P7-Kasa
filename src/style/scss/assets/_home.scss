@@ -18,12 +18,7 @@
   padding-left: 30px;
 }
 
-.home__grid {
-  @media screen and (min-width: $breakpoint-large) {
-    display: grid;
-    // grid-row: 10px;
 
-  }}
 
 .home__card {
   height: 255px;
