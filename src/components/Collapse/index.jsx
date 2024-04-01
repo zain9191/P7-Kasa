@@ -63,16 +63,16 @@ export function AboutColla({ title, description }) {
 
   return (
     <div className="collapsible">
-      <div className="Des-collapsible" {...getToggleProps()}>
+      <div className="collapsible__header" {...getToggleProps()}>
         <span>{title}</span>
         {isExpanded ? (
-          <img src={arrowDown} alt="hide description" />
+          <img src={arrowUp} alt="Hide description" />
         ) : (
-          <img src={arrowUp} alt="show description" />
+          <img src={arrowDown} alt="Show description" />
         )}
       </div>
       <div {...getCollapseProps()}>
-        <div className="content">
+        <div className="collapsible__content">
           {description} <br />
           <br />
           Click again to hide...

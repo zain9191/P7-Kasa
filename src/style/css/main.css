@@ -150,7 +150,6 @@
 .logement__description {
   width: 100%;
   height: fit-content;
-  border-radius: 5px;
 }
 .logement__owner-pic {
   height: 32px;
