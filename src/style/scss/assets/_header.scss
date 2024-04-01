@@ -7,34 +7,33 @@
   flex-direction: row;
   justify-content: space-between;
 
+  &__Logo {
+    // width: 201px; 
+    height: 68px;
+  }
 
-&__Logo {
-  // width: 201px; 
-  height: 68px;
-  
+  &__Ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    width: 335px;
+  }
+
+  &__Li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__Link {
+    color: $color-Primaire;
+    text-decoration: none;
+
+    &__active {
+      text-decoration: underline;
+    }
+  }
 }
 
-&__Ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  list-style: none;
-  width: 335px;
-  
-}
-
-&__Li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-}
-
-
-&__Link {
-  color: $color-Primaire;
-  text-decoration: none;
-  
-}
-}
 

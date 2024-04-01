@@ -22,6 +22,9 @@
   color: #ff6161;
   text-decoration: none;
 }
+.StyledHeaderDiv__Link__active {
+  text-decoration: underline;
+}
 
 .Footer-div {
   display: flex;
@@ -60,6 +63,7 @@
 }
 .error-main__back {
   margin-top: 100px;
+  color: #ff6161;
 }
 
 .StyledBackgroundDiv {
@@ -250,6 +254,21 @@
 .carousel__radios input[type=radio] {
   margin: 0 5px;
   cursor: pointer;
+}
+
+.AboutDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.AboutDiv > img {
+  max-height: 336px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+.AboutDiv > div {
+  padding-bottom: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

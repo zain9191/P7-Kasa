@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import "../../style/css/main.css";
 
@@ -11,14 +11,28 @@ function Header() {
         </div>
         <ul className="StyledHeaderDiv__Ul">
           <li className="StyledHeaderDiv__Li">
-            <Link to="/" className="StyledHeaderDiv__Link">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "StyledHeaderDiv__Link StyledHeaderDiv__Link__active"
+                  : "StyledHeaderDiv__Link"
+              }
+            >
               Accueil
-            </Link>
+            </NavLink>
           </li>
           <li className="StyledHeaderDiv__Li">
-            <Link to="/about" className="StyledHeaderDiv__Link">
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive
+                  ? "StyledHeaderDiv__Link StyledHeaderDiv__Link__active"
+                  : "StyledHeaderDiv__Link"
+              }
+            >
               A Propos
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>

@@ -72,11 +72,7 @@ export function AboutColla({ title, description }) {
         )}
       </div>
       <div {...getCollapseProps()}>
-        <div className="collapsible__content">
-          {description} <br />
-          <br />
-          Click again to hide...
-        </div>
+        <div className="collapsible__content">{description}</div>
       </div>
     </div>
   );
@@ -88,4 +84,9 @@ DescriptionCollapse.propTypes = {
 
 EquipmentCollapse.propTypes = {
   equipment: PropTypes.arrayOf(PropTypes.string),
+};
+
+AboutColla.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };

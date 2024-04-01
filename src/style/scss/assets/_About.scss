@@ -1,0 +1,15 @@
+.AboutDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    > img{
+        max-height: 336px;
+        object-fit: cover;
+        margin-bottom: 20px;
+        border-radius: 15px;
+
+    }
+    > div{
+        padding-bottom: 20px;
+    }
+}

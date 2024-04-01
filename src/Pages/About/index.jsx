@@ -2,6 +2,7 @@ import "../../style/css/main.css";
 import { AboutColla } from "../../components/Collapse/index";
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../utils/hooks";
+import bg from "../../assets/about-bg.png";
 
 const AboutVar = {
   Fiabilité:
@@ -16,7 +17,8 @@ const AboutVar = {
 
 function About() {
   return (
-    <div>
+    <div className="AboutDiv">
+      <img src={bg} className="AboutDiv__img" />
       {Object.entries(AboutVar).map(([title, description], index) => (
         <AboutColla key={index} title={title} description={description} />
       ))}
