@@ -19,29 +19,30 @@ function Home() {
   }, []);
 
   return (
-    <div>
-      <div className="StyledBackgroundDiv">
-        <div className="StyledOverlay" />
-        <span className="StyledBackgroundDiv__Text">
+    <div className="home">
+      <div className="home__header">
+        <div className="home__header-overlay" />
+        <span className="home__header-text">
           Chez vous, partout et ailleurs
         </span>
       </div>
-      {logementsData &&
-        logementsData.map((logementData) => (
-          <a
-            href={"logement/" + logementData.id}
-            key={logementData.id}
-            className="Home-Div-Cont"
-            style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${logementData.cover})`,
-            }}
-          >
-            <h2 className="Home-Div-Cont__h2">{logementData.title} </h2>
-          </a>
-        ))}
-    </div>
 
-    // testLogement
+      <div className="home__grid">
+        {logementsData &&
+          logementsData.map((logementData) => (
+            <a
+              href={"logement/" + logementData.id}
+              key={logementData.id}
+              className="home__card"
+              style={{
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${logementData.cover})`,
+              }}
+            >
+              <h2 className="home__card-title">{logementData.title} </h2>
+            </a>
+          ))}
+      </div>
+    </div>
   );
 }
 

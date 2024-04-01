@@ -66,7 +66,7 @@
   color: #ff6161;
 }
 
-.StyledBackgroundDiv {
+.home__header {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/header-bg.png");
   background-size: cover;
   background-position: center;
@@ -75,7 +75,8 @@
   border-radius: 10px;
   height: 111px;
 }
-.StyledBackgroundDiv__Text {
+
+.home__header-text {
   color: #ffffff;
   font-weight: 300;
   font-size: 24px;
@@ -84,19 +85,26 @@
   padding-left: 30px;
 }
 
-.Home-Div-Cont {
+@media screen and (min-width: 768px) {
+  .home__grid {
+    display: grid;
+  }
+}
+
+.home__card {
   height: 255px;
   border-radius: 10px;
   background: linear-gradient(0deg, rgba(121, 21, 21, 0.732952556) 0%, rgb(255, 97, 97) 100%);
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  margin: 20px 0px;
+  margin: 20px 0;
   background-size: cover;
   background-position: center;
   text-decoration: none;
 }
-.Home-Div-Cont__h2 {
+
+.home__card-title {
   font-weight: 500;
   font-size: 18px;
   line-height: 25.67px;
@@ -158,6 +166,12 @@
 .logement__owner-pic {
   height: 32px;
   border-radius: 50%;
+}
+@media screen and (min-width: 768px) {
+  .logement__owner-pic {
+    width: 64px;
+    height: 64px;
+  }
 }
 
 .collapsible__header {
@@ -224,14 +238,19 @@
   max-height: 336px;
   transition: opacity 0.9s ease;
   border-radius: 10px;
+  width: 100%;
 }
 .carousel .carousel__image-container img {
   width: 100%;
-  max-height: 100%;
-  max-height: 336px;
-  object-fit: contain;
+  height: 350px;
+  object-fit: cover;
   border-radius: 10px;
   transition: transform 0.9s ease;
+}
+@media screen and (min-width: 768px) {
+  .carousel .carousel__image-container img {
+    max-height: 415px;
+  }
 }
 
 .carousel__image-container {

@@ -1,6 +1,10 @@
+@import "variables";
+
+
 .carousel {
     position: relative;
     width: 100%;
+    
   
     .carousel__button {
       position: absolute;
@@ -27,20 +31,22 @@
         max-height: 336px; 
         transition: opacity 0.9s ease;
         border-radius: 10px;
-
-
-
+        width: 100%;
     }
   
 
     .carousel__image-container img {
-        width: 100%;
-        max-height: 100%;
-        
-        max-height: 336px;
-        object-fit: contain;
+        width: 100%;        
+        height: 350px;
+        object-fit: cover;
         border-radius: 10px;
-      transition: transform 0.9s ease;
+        transition: transform 0.9s ease;
+
+
+        @media screen and (min-width: $breakpoint-large) {
+          max-height: 415px;
+          
+        }
 
     }
   }

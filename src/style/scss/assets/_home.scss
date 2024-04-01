@@ -1,51 +1,47 @@
-.StyledBackgroundDiv {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('../../assets/header-bg.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    height: 111px;
-    
-
-  
-  
-  &__Text {
-    color: #ffffff;
-    font-weight: 300;
-    font-size: 24px;
-    line-height: 24px;
-    width: 217px;
-    padding-left: 30px;
+.home__header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url('../../assets/header-bg.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  height: 111px;
 }
-  }
-  
 
-.Home-Div-Cont{
-    height: 255px;
-    border-radius: 10px;
-    background: linear-gradient(0deg, rgba(121,21,21,0.7329525560224089) 0%, rgba(255,97,97,1) 100%);
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    margin: 20px 0px;
+.home__header-text {
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 24px;
+  width: 217px;
+  padding-left: 30px;
+}
 
+.home__grid {
+  @media screen and (min-width: $breakpoint-large) {
+    display: grid;
+    // grid-row: 10px;
 
+  }}
+
+.home__card {
+  height: 255px;
+  border-radius: 10px;
+  background: linear-gradient(0deg, rgba(121,21,21,0.7329525560224089) 0%, rgba(255,97,97,1) 100%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin: 20px 0;
   background-size: cover;
   background-position: center;
   text-decoration: none;
-
-
-    &__h2{
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 25.67px;
-    color: #FFFFFF;
-    padding-left: 21px;
-
-
-
-}
 }
 
+.home__card-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25.67px;
+  color: #FFFFFF;
+  padding-left: 21px;
+}

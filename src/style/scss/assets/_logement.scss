@@ -1,3 +1,5 @@
+@import "variables";
+
 .logement {
     &__main { 
       display: flex;
@@ -64,6 +66,11 @@
     &__owner-pic {
         height: 32px;
         border-radius: 50%;
+        @media screen and (min-width: $breakpoint-large) {
+          width: 64px;
+          height: 64px;
+          
+        }
       }
   }
   
