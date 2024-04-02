@@ -1,42 +1,97 @@
-.home__header {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url('../../assets/header-bg.png');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  border-radius: 10px;
-  height: 111px;
-}
+@import "variables";
 
-.home__header-text {
-  color: #ffffff;
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 24px;
-  width: 217px;
-  padding-left: 30px;
-}
+.home {
+  &__header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('../../assets/header-bg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    height: 111px;
+    & {
+      @media screen and (min-width: $breakpoint-large) {
+        height: 223px;
+        max-width: 1280px;
+        display: flex;
+        justify-content: center;
+
+      }}
+
+    &-text {
+      color: #ffffff;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 24px;
+      // width: 217px;
+      padding-left: 30px;
+
+      & {
+        @media screen and (min-width: $breakpoint-large) {
+
+          font-weight: 500;
+          font-size: 48px;
+          line-height: 68px;
+          // width: 217px;
+          max-width: 705px;
+          display: flex;
+          justify-content: center;
+  
+        }} 
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    background-color: $color-gray;
+    margin-top: 40px;
+    padding: 20px 20px 20px 20px;
+    border-radius: 15px;
+    max-width: 1240px;
 
 
+  }
 
-.home__card {
-  height: 255px;
-  border-radius: 10px;
-  background: linear-gradient(0deg, rgba(121,21,21,0.7329525560224089) 0%, rgba(255,97,97,1) 100%);
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  margin: 20px 0;
-  background-size: cover;
-  background-position: center;
-  text-decoration: none;
-}
+  &__card {
+    height: 255px;
+    border-radius: 10px;
+    background: linear-gradient(
+      0deg,
+      rgba(121, 21, 21, 0.7329525560224089) 0%,
+      rgba(255, 97, 97, 1) 100% 
+    );
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    // margin: 15px 15px 15px 15px ;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
 
-.home__card-title {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 25.67px;
-  color: #FFFFFF;
-  padding-left: 21px;
+    transition: box-shadow 0.3s ease;
+    &:hover {
+      box-shadow: $box-shadow;
+      -webkit-box-shadow: $box-shadow;
+      -moz-box-shadow: $box-shadow;
+    }
+
+    & {
+      @media screen and (min-width: $breakpoint-large) {
+
+        max-height: 340px;
+        max-width: 340px;
+
+      }} 
+
+    &-title {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 25.67px;
+      color: #ffffff;
+      padding-left: 21px;
+    }
+  }
 }
