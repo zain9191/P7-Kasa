@@ -11,10 +11,12 @@
 
     }
     &__AboutColla{
-        border:  dotted black 3px;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+        // display: flex;
+        >div{
+            // border: dotted black 5px;
+            width: 100%;
+        }
+        // flex-direction: column;
     }
-   
+    
 }

@@ -287,10 +287,7 @@
   margin-bottom: 20px;
   border-radius: 15px;
 }
-.AboutDiv__AboutColla {
-  border: dotted black 3px;
-  display: flex;
-  flex-direction: column;
+.AboutDiv__AboutColla > div {
   width: 100%;
 }
 
