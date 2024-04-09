@@ -25,14 +25,28 @@ const Carousel = ({ images }) => {
     );
   };
 
+  // Conditionally rendering the arrows if there are more than one image
+  const renderArrowLeft = images.length > 1 && (
+    <button
+      className={`carousel__button carousel__button--prev ${animation}`}
+      onClick={prevSlide}
+    >
+      <img src={arrow_left} alt="Previous Slide" />
+    </button>
+  );
+
+  const renderArrowRight = images.length > 1 && (
+    <button
+      className={`carousel__button carousel__button--next ${animation}`}
+      onClick={nextSlide}
+    >
+      <img src={arrow_right} alt="Next Slide" />
+    </button>
+  );
+
   return (
     <div className="carousel">
-      <button
-        className={`carousel__button carousel__button--prev ${animation}`}
-        onClick={prevSlide}
-      >
-        <img src={arrow_left} alt="Previous Slide" />
-      </button>
+      {renderArrowLeft}
       <div className={`carousel__image-container ${animation}`}>
         <img src={images[currentIndex]} alt={`Slide ${currentIndex}`} />
       </div>
@@ -43,17 +57,13 @@ const Carousel = ({ images }) => {
             type="radio"
             name="carousel-radio"
             checked={index === currentIndex}
-            onChange={() => setCurrentIndex(index)}
+            readOnly
           />
         ))}
       </div>
-      <button
-        className={`carousel__button carousel__button--next ${animation}`}
-        onClick={nextSlide}
-      >
-        <img src={arrow_right} alt="Next Slide" />
-      </button>
+      {renderArrowRight}
     </div>
   );
 };
+
 export default Carousel;
