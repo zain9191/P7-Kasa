@@ -23,7 +23,8 @@ function Home() {
       <div className="home__header">
         <div className="home__header-overlay" />
         <span className="home__header-text">
-          Chez vous, partout et ailleurs
+          Chez vous, <br className="br" />
+          partout et ailleurs
         </span>
       </div>
 

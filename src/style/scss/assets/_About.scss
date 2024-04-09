@@ -4,19 +4,29 @@
     justify-content: space-between;
     
     > img{
-        max-height: 336px;
+        // max-height: 336px;
         object-fit: cover;
+
+        height: 223px;
         margin-bottom: 20px;
         border-radius: 15px;
 
+
     }
     &__AboutColla{
-        // display: flex;
+        @media screen and (min-width: $breakpoint-large) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+
         >div{
-            // border: dotted black 5px;
-            width: 100%;
+            @media screen and (min-width: $breakpoint-large) {
+                width: 80%;
+           
+              }
         }
-        // flex-direction: column;
     }
     
 }

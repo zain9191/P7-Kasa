@@ -39,6 +39,7 @@
           justify-content: center;
   
         }} 
+
     }
   }
 
@@ -70,6 +71,8 @@
     background-size: cover;
     background-position: center;
     text-decoration: none;
+    position: relative;
+    overflow: hidden;
 
     transition: box-shadow 0.3s ease;
     &:hover {
@@ -94,4 +97,36 @@
       padding-left: 21px;
     }
   }
+}
+
+.home__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(1, 1, 0, 0), 
+    rgba(0, 0, 0, 0.5) 
+  ); 
+  pointer-events: none;
+  z-index: 1; 
+}
+
+.home__card img,
+.home__card h2 {
+  position: relative;
+  z-index: 2; 
+}
+
+.br{
+  @media screen and (min-width: $breakpoint-large) {
+
+    display: none;
+
+
+  }
+
 }

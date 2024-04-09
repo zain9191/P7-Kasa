@@ -1,7 +1,11 @@
 // $primary-color: #FF6060; 
 @import '_variables';
 
-
+:root{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .StyledHeaderDiv {
   display: flex;
   flex-direction: row;
