@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useFetch } from "../../utils/hooks";
 import "../../style/css/main.css";
 import Rating from "../../components/Rating";
@@ -11,7 +11,18 @@ import Carousel from "../../components/Carousel";
 
 function Logement() {
   const { logementId } = useParams();
+  const navigate = useNavigate();
   const { isLoading, data, error } = useFetch(`/logements.json`);
+
+  React.useEffect(() => {
+    if (
+      !isLoading &&
+      data &&
+      !data.some((logement) => logement.id === logementId)
+    ) {
+      navigate("/404");
+    }
+  }, [isLoading, data, logementId, navigate]);
 
   return (
     <div>
