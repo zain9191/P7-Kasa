@@ -1,6 +1,11 @@
 @import "variables";
 
 .home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
   &__header {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url('../../assets/header-bg.png');
@@ -10,6 +15,7 @@
     align-items: center;
     border-radius: 10px;
     height: 111px;
+    width: 100%;
     & {
       @media screen and (min-width: $breakpoint-large) {
         height: 223px;

@@ -6,7 +6,7 @@ font-family: "Montserrat";
 }
 
 body{
-    width:100s%;
+    width:100%;
     display;felx;
     align-items: center;
     // border:dotted red 2px;

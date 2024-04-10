@@ -11,8 +11,7 @@ const Carousel = ({ images }) => {
     setTimeout(() => {
       setAnimation("");
     }, 10);
-  }, [currentIndex]); // Trigger animation whenever currentIndex changes
-
+  }, [currentIndex]);
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
@@ -25,7 +24,6 @@ const Carousel = ({ images }) => {
     );
   };
 
-  // Conditionally rendering the arrows if there are more than one image
   const renderArrowLeft = images.length > 1 && (
     <button
       className={`carousel__button carousel__button--prev ${animation}`}

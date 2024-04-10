@@ -3,11 +3,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useFetch } from "../../utils/hooks";
 import "../../style/css/main.css";
 import Rating from "../../components/Rating";
-import {
-  DescriptionCollapse,
-  EquipmentCollapse,
-} from "../../components/Collapse/index";
 import Carousel from "../../components/Carousel";
+import UniversalCollapsible from "../../components/Collapse/index";
 
 function Logement() {
   const { logementId } = useParams();
@@ -73,8 +70,17 @@ function Logement() {
                   </div>
 
                   <div className="logement__description">
-                    <DescriptionCollapse description={logement.description} />
-                    <EquipmentCollapse equipment={logement.equipments} />
+                    <UniversalCollapsible title="Description">
+                      <p>{logement.description}</p>
+                    </UniversalCollapsible>
+
+                    <UniversalCollapsible title="Equipment">
+                      <ul>
+                        {logement.equipments.map((equipment, index) => (
+                          <li key={index}>{equipment}</li>
+                        ))}
+                      </ul>
+                    </UniversalCollapsible>
                   </div>
                 </div>
               );

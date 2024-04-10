@@ -17,11 +17,7 @@
             flex-direction: row;
             justify-content: space-between;
           }}
-          // &__second{
-          //   border: dotted red 3px;
-          //   display: flex;
-          //   flex-direction: column;
-          // }
+
       }
     }
   
@@ -52,7 +48,6 @@
           font-size: 18px;
           font-weight: 500;
           line-height: 25.67px;
-          // margin-bottom: 0px;
   
         }}
     }
@@ -66,7 +61,6 @@
         align-items: center;
         flex-wrap: wrap;
         min-height: 60px;
-        // border: dotted red 3px;
       }
   
       &--span { 
@@ -132,7 +126,6 @@
       min-width: 180px;
       max-width: 250px;
       
-      // border: dotted red 2px;
       font-weight: 500;
       font-size: 12px;
       line-height: 17.11px;
