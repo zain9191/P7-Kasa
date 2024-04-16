@@ -1,28 +1,12 @@
-import React, { useEffect, useState } from "react";
-// import PropTypes from "prop-types";
-
-const Card = () => {
-  const [accommodation, setAccommodation] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/logements.json");
-        if (!response.ok) throw new Error("Data could not be fetched");
-        const data = await response.json();
-      } catch (error) {
-        console.error("Error fetching data: ", error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  if (!accommodation) return <div>Loading...</div>;
+import React from "react";
+import PropTypes from "prop-types";
+import Carousel from "../Carousel";
+import UniversalCollapsible from "../Collapse";
+const Card = ({ logement }) => {
+  if (!logement) return <div>Loading...</div>;
 
   const {
     title,
-    cover,
     pictures,
     description,
     host,
@@ -30,19 +14,26 @@ const Card = () => {
     location,
     equipments,
     tags,
-  } = accommodation;
+  } = logement;
 
   return (
     <div className="card">
-      <img src={cover} alt={title} className="card-cover" />
-      <h2>{title}</h2>
-      <p>{description}</p>
+      <Carousel className={"carousel"} images={pictures} />
+      <h2 className="logement__title">{title}</h2>
+      {/* Collapsible Description
+      <UniversalCollapsible className={"collapsible"} title="Description">
+        <p>{description}</p>
+      </UniversalCollapsible> */}
       <div className="host-info">
-        <img src={host.picture} alt={host.name} className="host-picture" />
-        <p>Hosted by: {host.name}</p>
+        <img
+          className={"logement__owner-pic"}
+          src={host.picture}
+          alt={host.name}
+        />
+        <p className="logement__owner">{host.name}</p>
         <p>Rating: {rating}</p>
       </div>
-      <p>Location: {location}</p>
+      <p className="logement__location">Location: {location}</p>
       <div className="tags">
         {tags.map((tag, index) => (
           <span key={index} className="tag">
@@ -50,16 +41,32 @@ const Card = () => {
           </span>
         ))}
       </div>
-      <div className="equipments">
-        <h3>Equipments:</h3>
+      {/* Collapsible Equipment List
+      <UniversalCollapsible className={"collapsible"} title="Equipments">
         <ul>
           {equipments.map((equipment, index) => (
             <li key={index}>{equipment}</li>
           ))}
         </ul>
-      </div>
+      </UniversalCollapsible> */}
     </div>
   );
+};
+
+Card.propTypes = {
+  logement: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    pictures: PropTypes.array.isRequired,
+    description: PropTypes.string.isRequired,
+    host: PropTypes.shape({
+      picture: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    }).isRequired,
+    rating: PropTypes.number.isRequired,
+    location: PropTypes.string.isRequired,
+    equipments: PropTypes.array.isRequired,
+    tags: PropTypes.array.isRequired,
+  }).isRequired,
 };
 
 export default Card;

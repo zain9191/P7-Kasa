@@ -24,7 +24,6 @@ root.render(
         <Route path="*" element={<Error />} /> 
 
     </Routes>
-
         <Footer/>
     </React.StrictMode>
   </Router>
