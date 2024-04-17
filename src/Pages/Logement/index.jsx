@@ -4,7 +4,7 @@ import { useFetch } from "../../utils/hooks";
 import "../../style/css/main.css";
 // import Rating from "../../components/Rating";
 // import Carousel from "../../components/Carousel";
-import UniversalCollapsible from "../../components/Collapse/index";
+// import UniversalCollapsible from "../../components/Collapse/index";
 import Card from "../../components/Card";
 
 function Logement() {
@@ -33,19 +33,7 @@ function Logement() {
               return (
                 <div className="logement__main" key={logement.id}>
                   <Card logement={logement} />
-                  <div className="logement__description">
-                    <UniversalCollapsible title="Description">
-                      <p>{logement.description}</p>
-                    </UniversalCollapsible>
-
-                    <UniversalCollapsible title="Equipment">
-                      <ul>
-                        {logement.equipments.map((equipment, index) => (
-                          <li key={index}>{equipment}</li>
-                        ))}
-                      </ul>
-                    </UniversalCollapsible>
-                  </div>
+                  <div className="logement__description"></div>
                 </div>
               );
             }

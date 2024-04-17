@@ -202,11 +202,11 @@
   width: 100%;
   height: fit-content;
 }
-.logement__main__wraper {
+.logement__main__wrapper {
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .logement__main__wraper {
+  .logement__main__wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -274,13 +274,18 @@
   height: 100%;
   color: #ff6161;
 }
+@media screen and (min-width: 768px) {
+  .logement__rating-owner {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 .logement__rating-owner br {
   width: 100%;
 }
 @media screen and (min-width: 768px) {
   .logement__rating-owner {
     display: flex;
-    flex-direction: column-reverse;
   }
 }
 .logement__description {
@@ -299,6 +304,7 @@
   align-items: center;
   min-width: 180px;
   max-width: 250px;
+  max-height: 70px;
   font-weight: 500;
   font-size: 12px;
   line-height: 17.11px;
@@ -468,7 +474,7 @@
   }
 }
 
-.card {
+.Card {
   width: 98%;
 }
 

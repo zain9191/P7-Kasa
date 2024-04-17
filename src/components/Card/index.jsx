@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import Carousel from "../Carousel";
 import UniversalCollapsible from "../Collapse";
+import Rating from "../Rating";
+
 const Card = ({ logement }) => {
   if (!logement) return <div>Loading...</div>;
 
@@ -17,38 +19,56 @@ const Card = ({ logement }) => {
   } = logement;
 
   return (
-    <div className="card">
-      <Carousel className={"carousel"} images={pictures} />
-      <h2 className="logement__title">{title}</h2>
-      {/* Collapsible Description
-      <UniversalCollapsible className={"collapsible"} title="Description">
-        <p>{description}</p>
-      </UniversalCollapsible> */}
-      <div className="host-info">
-        <img
-          className={"logement__owner-pic"}
-          src={host.picture}
-          alt={host.name}
-        />
-        <p className="logement__owner">{host.name}</p>
-        <p>Rating: {rating}</p>
+    <div className="Card">
+      <Carousel className="carousel" images={pictures} />
+
+      <div className="logement__main__wrapper">
+        <div className="logement__main__wrapper__first">
+          <h2 className="logement__title">{title}</h2>
+          <h3 className="logement__location">{location}</h3>
+          <div className="logement__tags--div">
+            {tags.map((tag, index) => (
+              <div key={index}>
+                <span className="logement__tags--span">{tag}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="logement__main__wrapper__second">
+          <div className="logement__rating-owner">
+            <Rating
+              rating={parseInt(rating)}
+              className="logement__rating-div"
+            />
+
+            <div className="logement__owner">
+              {host.name.split(" ")[0]}
+              <br />
+              {host.name.split(" ")[1]}
+              <img
+                className="logement__owner-pic"
+                src={host.picture}
+                alt="the owner"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-      <p className="logement__location">Location: {location}</p>
-      <div className="tags">
-        {tags.map((tag, index) => (
-          <span key={index} className="tag">
-            {tag}
-          </span>
-        ))}
+
+      <div className="logement__description">
+        <UniversalCollapsible className="collapsible" title="Description">
+          <p>{description}</p>
+        </UniversalCollapsible>
+
+        <UniversalCollapsible className="collapsible" title="Equipments">
+          <ul>
+            {equipments.map((equipment, index) => (
+              <li key={index}>{equipment}</li>
+            ))}
+          </ul>
+        </UniversalCollapsible>
       </div>
-      {/* Collapsible Equipment List
-      <UniversalCollapsible className={"collapsible"} title="Equipments">
-        <ul>
-          {equipments.map((equipment, index) => (
-            <li key={index}>{equipment}</li>
-          ))}
-        </ul>
-      </UniversalCollapsible> */}
     </div>
   );
 };
